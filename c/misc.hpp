@@ -1,7 +1,9 @@
 #ifndef MISC_H
 #define MISC_H
 
+#ifdef USE_OPENMP
 #include <omp.h>
+#endif
 #include <cstdint>
 
 uint32_t log2 (uint32_t value);
