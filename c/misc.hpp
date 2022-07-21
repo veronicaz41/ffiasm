@@ -1,12 +1,12 @@
 #ifndef MISC_H
 #define MISC_H
 
-#ifdef USE_OPENMP
-#include <omp.h>
-#endif
 #include <cstdint>
 
 uint32_t log2 (uint32_t value);
+
+#ifdef USE_OPENMP
+#include <omp.h>
 
 /**
  * This object is used to temporarily change the max number of omp threads.
@@ -28,5 +28,6 @@ public:
 private:
     uint32_t prev_max_threads;
 };
+#endif
 
 #endif // MISC_H
